@@ -12,7 +12,7 @@
    justify-content: space-between;
    align-items: center;
    padding: 10px 18%;
-   border-bottom: 1px solid rgba(219, 219, 219, 219);
+   border-bottom: 1px solid rgba(219, 219, 219, 1);
    background-color: white;
    position: sticky;
    top: 0%;
@@ -29,7 +29,7 @@
 
  }
 
- z header.search-box {
+ header.search-box {
    width: 250px;
    background-color: rgba(239, 239, 239, 1);
    padding: 3px 16px;
@@ -38,7 +38,7 @@
    border-radius: 8px;
  }
 
- header-search-box input {
+ header .search-box input {
    height: 30px;
    border: none;
    outline: none;
@@ -49,26 +49,21 @@
 
  }
 
- header nav u1 {
+ header nav ul {
    list-style: none;
    display: flex;
  }
 
- header nav u1 li a i {
-   font-size: 22px;
-   color: rgba(38, 38, 38, 1)
+ header nav ul li {
+   margin-right: 30px;
  }
 
- header nav u1 li {
-   margin-right: 20px;
- }
-
- header nav u1 li :last-child {
+ header nav ul li :last-child {
    margin-right: 0;
 
  }
 
- header nav u1 li a img {
+ header nav ul li a img {
    width: 22px;
    height: 22px;
    border-radius: 50%;
@@ -76,7 +71,7 @@
 
  }
 
- header nav u1 li a i {
+ header nav ul li a i {
    font-size: 22px;
    color: rgba(38, 38, 38, 1);
 
@@ -149,6 +144,10 @@
    align-items: center;
  }
 
+ .posts .post-title .post-left .image {
+   margin-right: 15px;
+ }
+
  .post .post-title .post-left .image img {
    border-radius: 50%;
    object-fit: contain;
@@ -169,10 +168,10 @@
  .post .post-footer {
    display: flex;
    justify-content: space-between;
+   padding: 16px;
  }
 
- .post .post-footer,
- like-share-comment i {
+ .post .post-footer .like-share-comment i {
    font-size: 22px;
    margin-right: 10px;
  }
@@ -270,18 +269,19 @@
    padding-bottom: 3px;
  }
 
- .suggestion {
+ .suggestions {
    display: flex;
    margin-top: 25px;
    margin-bottom: 20px;
  }
 
- .suggestion p {
+ .suggestions p {
    margin-right: 90px;
  }
- .suggestion p :last-child{
-  margin-right: 0px;
-}
+
+ .suggestions p :last-child {
+   margin-right: 0px;
+ }
 
  .suggestion-title {
    display: flex;
@@ -294,42 +294,51 @@
    align-items: center;
    margin-right: 60px;
  }
- .suggestion-title .suggestion-left .image img{
-  border-radius: 50%;
-  margin-right: 15px;
+
+ .suggestion-title .suggestion-left .image img {
+   border-radius: 50%;
+   margin-right: 15px;
+   object-fit: cover;
  }
- 
- .suggestion-title .suggestion-left .details .name{
-  padding-bottom: 3px;
+
+ .suggestion-title .suggestion-left .details .name {
+   padding-bottom: 3px;
  }
 
 
 
  /*media queries*/
-  
- @media (max-width:992px){
-header{ padding: 10px 20px;
-}
-section .left-side{
-  width: 100%;
-}
-section .right-side{
-display: none;}
+
+ @media (max-width:992px) {
+   header {
+     padding: 10px 20px;
+   }
+
+   section .left-side {
+     width: 100%;
+   }
+
+   section .right-side {
+     display: none;
+   }
  }
 
- @media (max-width:768px){
-  header .search-box{
-    display: none;
-  }
-  section{
-    padding: 30px;
-  }
+ @media (max-width:768px) {
+   header .search-box {
+     display: none;
+   }
+
+   section {
+     padding: 30px 20px;
+   }
  }
-@media (max-width:576px){
-  .story .stories{
-    width: 25%;
-  }
-  header nav u1 li{
-    margin-right: 10px ;
-  }
-}
+
+ @media (max-width:576px) {
+   .story .stories {
+     width: 25%;
+   }
+
+   header nav ul li {
+     margin-right: 10px;
+   }
+ }
